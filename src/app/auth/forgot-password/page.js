@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { toast } from "@/components/notifications/Toast";
+import  Toast  from "@/components/notifications/Toast";
 import TypewriterText from "@/components/animations/TypewriterText";
 
 export default function ForgotPasswordPage() {
@@ -12,7 +12,7 @@ export default function ForgotPasswordPage() {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
-      toast("Password reset link sent to your email!", "success");
+      Toast("Password reset link sent to your email!", "success");
       setLoading(false);
     }, 1000);
   };
