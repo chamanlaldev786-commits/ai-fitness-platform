@@ -1,0 +1,22 @@
+{
+  "bar": [
+    { "label": "Mon", "value": 1800 },
+    { "label": "Tue", "value": 2200 },
+    { "label": "Wed", "value": 2000 },
+    { "label": "Thu", "value": 2500 },
+    { "label": "Fri", "value": 2300 },
+    { "label": "Sat", "value": 2100 },
+    { "label": "Sun", "value": 1900 }
+  ],
+  "line": [
+    { "date": "2026-01-01", "weight": 70 },
+    { "date": "2026-01-02", "weight": 70.2 },
+    { "date": "2026-01-03", "weight": 69.9 },
+    { "date": "2026-01-04", "weight": 69.8 }
+  ],
+  "pie": [
+    { "label": "Protein", "value": 30 },
+    { "label": "Carbs", "value": 50 },
+    { "label": "Fats", "value": 20 }
+  ]
+}

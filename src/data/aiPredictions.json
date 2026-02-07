@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Hydration Boost",
+    "summary": "Drink 2 liters of water today for optimal performance.",
+    "imageUrl": "/images/foods/water-glass.png",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "title": "Morning Stretch",
+    "summary": "Perform 10 minutes of stretching to improve flexibility.",
+    "imageUrl": "/images/exercise/stretch.png",
+    "videoUrl": "https://www.youtube.com/embed/VbfpW0pbvaU"
+  },
+  {
+    "title": "Healthy Snack",
+    "summary": "Eat a handful of nuts to boost energy levels.",
+    "imageUrl": "/images/foods/banana.png",
+    "videoUrl": "https://www.youtube.com/embed/3JZ_D3ELwOQ"
+  }
+]
