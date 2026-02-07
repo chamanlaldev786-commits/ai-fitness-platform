@@ -18,16 +18,15 @@ const backgroundImages = [
 ];
 
 export default function DashboardPage() {
-  const [currentImage, setCurrentImage] = useState(backgroundImages[0]);
+  const [currentImage] = useState(() => {
+    const dayIndex = new Date().getDate() % backgroundImages.length;
+    return backgroundImages[dayIndex];
+  });
   const [predictions, setPredictions] = useState([]);
   const [foodData, setFoodData] = useState([]);
   const [exerciseData, setExerciseData] = useState([]);
 
   useEffect(() => {
-    // Set daily rotating background
-    const dayIndex = new Date().getDate() % backgroundImages.length;
-    setCurrentImage(backgroundImages[dayIndex]);
-
     // Load AI data, food, exercise
     async function loadData() {
       const aiData = await fetchAIPredictions();

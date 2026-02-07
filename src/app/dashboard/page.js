@@ -23,15 +23,8 @@ const mockWorkoutLogs = [
 /* ---------------- PAGE ---------------- */
 
 export default function DashboardPage() {
-  const [foodData, setFoodData] = useState([]);
-  const [workoutData, setWorkoutData] = useState([]);
-  const [aiScore, setAiScore] = useState(null);
-
-  /* ---------- SMART LOGIC ---------- */
-  useEffect(() => {
-    setFoodData(mockFoodLogs);
-    setWorkoutData(mockWorkoutLogs);
-  }, []);
+  const [foodData] = useState(mockFoodLogs);
+  const [workoutData] = useState(mockWorkoutLogs);
 
   const totalCalories = useMemo(
     () => foodData.reduce((sum, item) => sum + item.calories, 0),
@@ -48,17 +41,13 @@ export default function DashboardPage() {
     [workoutData]
   );
 
-  /* ---------- AI SCORE LOGIC (Frontend AI) ---------- */
-  useEffect(() => {
-    if (!avgCalories || !totalWorkoutMinutes) return;
-
+  const aiScore = useMemo(() => {
+    if (!avgCalories || !totalWorkoutMinutes) return null;
     let score = 50;
-
     if (avgCalories < 2000) score += 15;
     if (avgCalories > 2300) score -= 10;
     if (totalWorkoutMinutes > 90) score += 20;
-
-    setAiScore(Math.min(100, score));
+    return Math.min(100, score);
   }, [avgCalories, totalWorkoutMinutes]);
 
   /* ---------------- UI ---------------- */

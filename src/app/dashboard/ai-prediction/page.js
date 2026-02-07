@@ -8,6 +8,7 @@ import BarChart from "@/components/charts/BarChart";
 import LineChart from "@/components/charts/LineChart";
 import PieChart from "@/components/charts/PieChart";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { getFoodLogs } from "@/services/foodService";
 import { getExercises } from "@/services/exerciseService";
@@ -109,14 +110,17 @@ export default function SmartAIPredictionPage() {
         <p className="mt-3 text-lg text-gray-700">AI-powered insights from your food & workouts</p>
       </div>
 
-      {/* Hero Image */}
       {dynamicImage && (
         <SlideUp>
-          <img
-            src={dynamicImage}
-            alt="AI Health"
-            className="mx-auto mb-12 w-full max-w-6xl rounded-2xl shadow-2xl hover:scale-[1.02] transition-transform duration-700"
-          />
+          <div className="mx-auto mb-12 w-full max-w-6xl">
+            <Image
+              src={dynamicImage}
+              alt="AI Health"
+              width={1200}
+              height={420}
+              className="w-full rounded-2xl shadow-2xl hover:scale-[1.02] transition-transform duration-700"
+            />
+          </div>
         </SlideUp>
       )}
 
