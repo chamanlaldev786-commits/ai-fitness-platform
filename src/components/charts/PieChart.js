@@ -34,6 +34,7 @@ export default function PieChart({ labels = [], values = [], colors = [] }) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { position: "right" },
       tooltip: { mode: "index", intersect: false },
@@ -41,8 +42,10 @@ export default function PieChart({ labels = [], values = [], colors = [] }) {
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-md">
-      <Pie data={chartData} options={options} />
+    <div className="bg-white p-4 rounded-xl shadow-md w-full">
+      <div className="h-48 md:h-64">
+        <Pie data={chartData} options={options} />
+      </div>
     </div>
   );
 }

@@ -57,7 +57,7 @@ export default function DashboardPage() {
 
   return (
     <div
-      className="relative w-full min-h-screen text-white flex flex-col items-center"
+      className="relative w-full min-h-screen text-white flex flex-col items-start"
       style={{
         backgroundImage: `url(${currentImage})`,
         backgroundSize: "cover",
@@ -68,7 +68,7 @@ export default function DashboardPage() {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-800 via-pink-700 to-yellow-600 opacity-70"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl p-6">
+      <div className="relative z-10 w-full p-6 md:px-8">
         {/* Header */}
         <div className="text-center mb-10">
           <h1 className="text-5xl md:text-7xl font-extrabold mb-4">
@@ -124,16 +124,16 @@ export default function DashboardPage() {
 
         {/* YouTube Video */}
         <div className="mb-10">
-          <iframe
-            width="100%"
-            height="360"
-            src="https://www.youtube.com/embed/dRl3Z4hfp5Y"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="rounded-xl shadow-lg"
-          ></iframe>
+          <div className="aspect-video w-full rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/dRl3Z4hfp5Y"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
 
         {/* Call to action */}

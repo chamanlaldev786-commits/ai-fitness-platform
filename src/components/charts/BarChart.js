@@ -31,18 +31,22 @@ export default function BarChart({ labels = [], dataCalories = [], dataExercise 
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: { position: "top" },
       tooltip: { mode: "index", intersect: false },
     },
     scales: {
       y: { beginAtZero: true },
+      x: { ticks: { maxRotation: 0, autoSkip: true } },
     },
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-md">
-      <Bar data={data} options={options} />
+    <div className="bg-white p-4 rounded-xl shadow-md w-full">
+      <div className="h-48 md:h-64">
+        <Bar data={data} options={options} />
+      </div>
     </div>
   );
 }

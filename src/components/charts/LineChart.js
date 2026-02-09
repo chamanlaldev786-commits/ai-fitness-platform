@@ -32,13 +32,16 @@ export default function LineChart({ labels = [], data = [] }) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: { legend: { position: "top" }, tooltip: { mode: "index", intersect: false } },
-    scales: { y: { beginAtZero: true } },
+    scales: { y: { beginAtZero: true }, x: { ticks: { maxRotation: 0, autoSkip: true } } },
   };
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-md">
-      <Line data={chartData} options={options} />
+    <div className="bg-white p-4 rounded-xl shadow-md w-full">
+      <div className="h-48 md:h-64">
+        <Line data={chartData} options={options} />
+      </div>
     </div>
   );
 }

@@ -21,9 +21,9 @@ export default function RootLayout({ children }) {
         <Sidebar />
 
         {/* Main content */}
-        <div className="flex-1 flex flex-col ml-64 min-h-screen">
+        <div className="flex-1 flex flex-col min-h-screen">
           <Navbar />
-          <main className="flex-1 p-6 overflow-auto">{children}</main>
+          <main className="flex-1 px-4 py-6 overflow-auto">{children}</main>
           <Footer />
         </div>
       </body>

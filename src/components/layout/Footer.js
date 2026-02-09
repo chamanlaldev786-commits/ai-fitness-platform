@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="w-full bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-600 text-white py-6 mt-12 shadow-inner">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div className="px-4 md:px-6 flex flex-col md:flex-row justify-between items-center">
         {/* Left Section */}
         <p className="mb-2 md:mb-0 text-center md:text-left">
           © {new Date().getFullYear()} AI Health Dashboard. All rights reserved.
